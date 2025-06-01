@@ -1,0 +1,24 @@
+/* Change the font for the page */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Add a border around the table */
+table {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+/* Add borders to all cells and header cells */
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+th{
+  background-color: white;
+}
+/* Alternate background color for every even-numbered row*/
+tr:nth-child(odd) {
+  background-color: lightgray;
+}
