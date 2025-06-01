@@ -85,7 +85,66 @@
             <a href="http://www.jordaneliasportfolio.com">www.jordaneliasportfolio.com</a>
         </section>
 
+        <!-- Show More Section -->
+        <section>
+            <h2>More About Me</h2>
+            <div id="more-details" style="display: none;">
+                <p>I am fluent in French and enjoy working in multicultural environments. I also participate in local youth mentorship programs and frequently attend professional workshops to continue learning and growing.</p>
+            </div>
+            <button onclick="toggleDetails(event)">Show More</button>
+        </section>
+
+        <!-- Feedback Form Section -->
+        <section>
+            <h2>Leave a Message</h2>
+            <form id="feedback-form" onsubmit="return validateForm()">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name"><br><br>
+
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+
+                <label for="message">Your Message:</label><br>
+                <textarea id="message" name="message"></textarea><br><br>
+
+                <input type="submit" value="Send Message">
+            </form>
+            <p id="form-error" style="color: red;"></p>
+        </section>
+
     </main>
+
+    <!-- JavaScript goes here -->
+    <script>
+        function toggleDetails(event) {
+            const details = document.getElementById("more-details");
+            const button = event.target;
+
+            if (details.style.display === "none") {
+                details.style.display = "block";
+                button.textContent = "Show Less";
+            } else {
+                details.style.display = "none";
+                button.textContent = "Show More";
+            }
+        }
+
+        function validateForm() {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+            const error = document.getElementById("form-error");
+
+            if (!name || !email || !message) {
+                error.textContent = "Please fill out all fields before submitting.";
+                return false;
+            }
+
+            error.textContent = "";
+            alert("Message sent successfully!");
+            return true;
+        }
+    </script>
 
 </body>
 </html>
