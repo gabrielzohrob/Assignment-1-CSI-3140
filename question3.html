@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSI3140 - Part2 - Question 3</title>
+        <h1>Website Registration Form</h1>
+    </head>
+
+    <body>
+        <form action = "/submit" method="post">
+            <label for = "first-name">First Name</label>
+            <input type  = "text" id="first-name" name="first-name" required><br><br>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <details>
+                <summary>Optional Question: What is your year in university?</summary>
+                <label for="university-year">Select your year:</label>
+                <select id="university-year" name="university-year">
+                    <option value="">-- Please choose an option --</option>
+                    <option value="Not yet in university">Not yet in university</option>
+                    <option value="Freshman">Freshman</option>
+                    <option value="Sophomore">Sophomore</option>
+                    <option value="Junior">Junior</option>
+                    <option value="Senior">Senior</option>
+                    <option value="Graduate">Graduate</option>
+                </select>
+            </details>
+
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </body>
+</html>
